@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--Important links to be added for styling-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/mad-hacker" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rubik-vinyl" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cherrils" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/monalisa-serif" rel="stylesheet">   
+    <link href="https://fonts.cdnfonts.com/css/kosugi-maru" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/g-gurun" rel="stylesheet">
+                
+                
+                            
+            
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+</head>
+
+
+
+<!--Meat & Bones the body of the html file-->
+<body class="Home">
+
+   
+        <!--Navigation-->
+        <nav>
+
+            <div class="navbar">
+                <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+                <a  href="About.html"><i class="	fa fa-info-circle"></i> About</a>
+                <a class="active" href="Portfolio.html"><i class="fa fa-code"></i> Portfolio</a>
+                <a href="Experience.html"><i class="fa fa-briefcase"></i> Experience</a>
+            </div>
+        </nav>
+    
+        <br>
+        <br>
+    
+        <div class="header">
+            <!--Title-->
+            <div>
+                <h1 class="Title">KEVIN PAUL</h1>
+                <h2 class="Sub">Junior Software Engineer</h2>
+            </div>
+    
+            <!--Sub Heading-->
+            <div class="container">
+                <h4 class="text">console.log("Portfolio Page!");</h4>
+            </div>
+        </div>
+    
+    <br>
+    <br>
+
+
+    <!--Image Slideshow to display projects-->
+    <div class ="slideshow-container">
+
+        <!--RPG Text Game-->
+        <div class="mySlides fade">
+            <div class="numbertext">1/6</div>
+            <img src="Assets/TextRPG.jpg" alt="Text RPG Game in C#" style="width:100%">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="caption">This is an JRPG Turn based adventure game inspired by the old rpgs games. This was coded
+                in C# and the user interacts via a text based story through the console.
+            </div>
+        </div>
+
+        <!--Gravity Ball Game-->
+        <div class="mySlides fade" >
+            <div class="numbertext">2/6</div>
+            <img src="Assets/GravityBall.jpg" id="help" alt="Falling Ball game in JS,CSS HTML" style="width:50%;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="caption">This is an simple indie game where the user controls a ball moving left or right as the platforms move up.
+                The functionality was coded in JS with the front-end in HTML, CSS.
+            </div>
+        </div>
+
+        <!--RPG Unity Game Game-->
+        <div class="mySlides fade" >
+            <div class="numbertext">3/6</div>
+            <img src="Assets/WorkUnity.jpg" alt="RPG game coded in C# and Unity" style="width:70%" id="help">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="caption">Visual 2D RPG game with a fully moveable character and enemy slimes. Very proud of this project, this project
+                is a kin to the olden Dragon Quest RPG games, this was made using the tools in Unity and C#.
+            </div>
+        </div>
+
+        <!--Rock Paper Scissors-->
+        <div class="mySlides fade">
+            <div class="numbertext">4/6</div>
+            <img src="Assets/RockPaper.jpg" alt="RPG game coded in C# and Unity" style="width:80%" id="help">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="caption">This is an app I created in Android Studio using Java, the purpose is meant to emulate the
+                traditional rock paper scissors game, the app keeps a count of the score against the COM.
+            </div>
+        </div>
+
+        <!--Greek God Gallery-->
+        <div class="mySlides fade">
+            <div class="numbertext">5/6</div>
+            <img src="Assets/Greek.jpg" alt="RPG game coded in C# and Unity" style="width:100%">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="caption">JS HTML & CSS, wanted to create a Greek God gallery to allow people to buy copies with them and find out
+                more information.
+            </div>
+        </div>
+
+      
+
+        <!--The Forward & Back buttons-->
+        <a class = "prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <!--The dots at the bottom-->
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" activeZ", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " activeZ";
+        }
+    </script>
+   
+    <br>
+    <br>
+    <br>
+    <br>
+   <!--Footers-->
+   <footer>
+    <div class="footer">
+        <a href ="https://www.linkedin.com/in/kevin-paul-43b8b8263" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-linkedin-square"></i>  Linkedin</p></a>
+        <a href ="https://github.com/CodeKaiKev" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-github"></i>  GitHub</p></a>
+        <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-youtube-play"></i>  Youtube</p></a>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label> 
+            <script>
+                const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                const currentTheme = localStorage.getItem('theme');
+
+                if (currentTheme) {
+                    document.documentElement.setAttribute('data-theme', currentTheme);
+                
+                    if (currentTheme === 'dark') {
+                        toggleSwitch.checked = true;
+                    }
+                }
+
+                function switchTheme(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                    else {        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    }    
+                }
+
+                toggleSwitch.addEventListener('change', switchTheme, false);
+            </script>
+        </div>
+        <p><i class ="fa fa-copyright"></i>  Copyright Kevin Paul</p>
+    </div>
+</footer>
+</body>
+</html>

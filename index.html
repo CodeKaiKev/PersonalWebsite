@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--Important links to be added for styling-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/mad-hacker" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rubik-vinyl" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cherrils" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/monalisa-serif" rel="stylesheet">   
+    <link href="https://fonts.cdnfonts.com/css/kosugi-maru" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>          
+                            
+            
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+    <script defer src="animation.js"></script>
+                
+</head>
+
+
+
+<!--Meat & Bones the body of the html file-->
+<body class="Home">
+
+        <!--Navigation-->
+        <nav>
+
+            <div class="navbar">
+                <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+                <a  href="About.html"><i class="	fa fa-info-circle"></i> About</a>
+                <a href="Portfolio.html"><i class="fa fa-code"></i> Portfolio</a>
+                <a href="Experience.html"><i class="fa fa-briefcase"></i> Experience</a>
+            </div>
+        </nav>
+    
+        <br>
+        <br>
+    
+        <div class="header">
+            <!--Title-->
+            <div>
+                <h1 class="Title">KEVIN PAUL</h1>
+                <h2 class="Sub">Junior Software Engineer</h2>
+            </div>
+    
+            <!--Sub Heading-->
+            <div class="container">
+                <h4 class="text">console.log("Home Page!");</h4>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+       
+        <div class="baller">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_2glqweqs.json"  background="transparent"  speed="1"  loop  autoplay ></lottie-player>
+        </div>
+        
+       
+    
+    <!--Footers-->
+    <footer>
+        <div class="footer">
+            <a href ="https://www.linkedin.com/in/kevin-paul-43b8b8263" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-linkedin-square"></i>  Linkedin</p></a>
+            <a href ="https://github.com/CodeKaiKev" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-github"></i>  GitHub</p></a>
+            <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener noreferrer"></i><p><i class ="fa fa-youtube-play"></i>  Youtube</p></a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label> 
+                <script>
+                    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                    const currentTheme = localStorage.getItem('theme');
+
+                    if (currentTheme) {
+                        document.documentElement.setAttribute('data-theme', currentTheme);
+                    
+                        if (currentTheme === 'dark') {
+                            toggleSwitch.checked = true;
+                        }
+                    }
+
+                    function switchTheme(e) {
+                        if (e.target.checked) {
+                            document.documentElement.setAttribute('data-theme', 'dark');
+                            localStorage.setItem('theme', 'dark');
+                        }
+                        else {        document.documentElement.setAttribute('data-theme', 'light');
+                            localStorage.setItem('theme', 'light');
+                        }    
+                    }
+
+                    toggleSwitch.addEventListener('change', switchTheme, false);
+                </script>
+            </div>
+            <p><i class ="fa fa-copyright"></i>  Copyright Kevin Paul</p>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>
